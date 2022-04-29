@@ -24,19 +24,45 @@ function factorial(){
 
 document.querySelector('#calc-perm').addEventListener('click', permutation);
 
-const permutationSolution = document.querySelector('#perm-sol')
+const permutationSolution = document.querySelector('#perm-sol');
 
 
 function permutation(){
     let n1 = Number(document.querySelector('#n1').value);
     let r1 = Number(document.querySelector('#r1').value);
-    if(n1 < r1 || isNaN(n1) || isNaN(r1)){
+    if(n1 < r1){
         permutationSolution.innerText = 'Error! n must be and integer larger than r.'
     } else {
-        let arr1 = []
-    for(let i = n1; i > n1-r1; i--){
+        let arr1 = [];
+        for(let i = n1; i > n1-r1; i--){
         arr1.push(i)
     }  let perm = arr1.reduce((a,b)=>a*b,1)
     permutationSolution.innerText = perm
  } 
+}
+
+//combination
+
+document.querySelector('#calc-comb').addEventListener('click', combination);
+
+const combinationSolution = document.querySelector('#comb-sol');
+
+function combination() {
+    let n2 = Number(document.querySelector('#n2').value);
+    let r2 = Number(document.querySelector('#r2').value);
+    if(n2 < r2){
+        combinationSolution.innerText = 'Error! n must be an integer larger than r.'
+    } else{
+        let arr2 = [];
+        let arr3 = []
+        for(let i = n2; i > n2-r2; i--){
+            arr2.push(i) }
+            for(let j= 1; j <=r2; j++){
+                arr3.push(j);
+            }
+        let prod1 = arr2.reduce((a,b)=>a*b,1)
+        let prod2 = arr3.reduce((a,b)=>a*b,1);
+        let comb = prod1/prod2;
+        combinationSolution.innerText = comb;
+    }
 }
