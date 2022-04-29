@@ -1,32 +1,38 @@
 //factorial
 
-document.querySelector('#factorial').addEventListener('click', factorial)
+document.querySelector('#calc-factorial').addEventListener('click', factorial)
+
+const factorialSolution = document.querySelector('#fact-sol');
+const userInput = document.querySelector('#fact-num');
 
 function factorial(){
-    let num = Number(document.querySelector('#fact-num').value);
-    if(num < 0){
-        document.querySelector('#fact-sol').innerText = 'Error! The input must be a positive integer.'
+    let num = Number(userInput.value);
+    if(isNaN(num) || num < 0){
+        factorialSolution.innerText = 'Error! The input must be a positive integer.'
     } else if(num === 0){
-        document.querySelector('#fact-sol').innerText = '1'
-    } let fact = 1; 
+        factorialSolution.innerText = '1'
+    } else{
+        //let fact = 1; 
+    let arr = []
     for(let i=1; i <=num; i++){
-        fact *= i;
-    } document.querySelector('#fact-sol').innerText = fact;
+        arr.push(i);
+       // fact *= i;
+    } let fact = arr.reduce((a,b)=>a*b,1)
+    factorialSolution.innerText = fact
 }
-
-factorial();
+}
 
 //permutation
 
-function permutation(){
-    let n1 = Number(document.querySelector('#').value);
-    let r1 = Number(documnet.querySelector('#').value);
-    if(n1 < r1){
-        document.querySelector('#').innerText = 'Error! n must be larger than r.'
-    } let perm = 1
-    for(let i = n1; i > n1-r1; i--){
-        perm *= i
-    } document.querySelector('#').innerText = perm
-}
+// document.querySelector('#permutation').addEventListener('click', permutation)
 
-permutation();
+// function permutation(){
+//     let n1 = Number(document.querySelector('#n1').value);
+//     let r1 = Number(documnet.querySelector('#r1').value);
+//     if(n1 < r1){
+//         document.querySelector('#perm-sol').innerText = 'Error! n must be larger than r.'
+//     } let perm = 1
+//     for(let i = n1-r1+1; i <= n1; i++){
+//         perm *= i
+//     } document.querySelector('#perm-sol').innerText = perm
+// }
