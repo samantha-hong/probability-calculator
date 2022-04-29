@@ -1,0 +1,71 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+h1{
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+h2{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: bold
+}
+
+h4{
+    font-size: 1.5em;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+section{
+    border: 2px dashed white;
+    border-radius: 5%;
+    margin: 10px;
+    padding: 10px;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 80px;
+    height: 80px;
+    font-size: 3em;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+span{
+    font-size: 4em;
+}
+
+button{
+    margin: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+.factorial{
+    color: #f0a1e3;
+    border: 2px dashed #f0a1e3;
+}
+
+.factorial input, button{
+    color: #f0a1e3;
+}
