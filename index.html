@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Probability Calculator</title>
 </head>
 <body>
     <h1>Probability Calculator</h1>
     <main>
-        <section>
+        <section class="factorial">
             <h2>Factorial</h2>
             <form>
-                <input type="number" pattern="'[0-9]" inputmode='numeric' id="fact-num">
+                <input type="number" pattern="'[0-9]" inputmode='numeric' id="fact-num"><span>!</span> 
             </form>
-            <button id="calc-factorial">Calculate!</button>
-            <h3 id="fact-sol"></h3>
+            <button id="calc-factorial"><h4>Calculate!</h4></button>
+            <h2 id="fact-sol"></h2>
         </section>
         <section>
             <h2>Permutation</h2>
             <form>
-                <input type="number" id="n1"> 
+                <input type="number" pattern="'[0-9]" inputmode='numeric' id="n1"> 
             </form>
             <h3>P</h3>
             <form>
-                <input type="number" id="r1">
+                <input type="number" pattern="'[0-9]" inputmode='numeric' id="r1">
             </form>
-            <button id="calc-perm">Calculate!</button>
-            <h3 id="perm-sol"></h3>
+            <button id="calc-perm"><h4>Calculate!</h4></button>
+            <h2 id="perm-sol"></h2>
         </section>
         <section>
             <h2>Combination</h2>
+            <form>
+                <input type="number" pattern="'[0-9]" inputmode='numeric' id="n2">
+            </form>
+            <h3>C</h3>
+            <form>
+                <input type="number" pattern="'[0-9]" inputmode='numeric' id="r2">
+            </form>
+            <button id="calc-comb"><h4>Calculate!</h4></button>
+            <h2 id="comb-sol"></h2>
         </section>
     </main>
     <script type="text/javascript" src="main.js"></script>
