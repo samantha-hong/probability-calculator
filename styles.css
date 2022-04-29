@@ -104,11 +104,16 @@ button{
     h4{
         font-size: 1rem;
     }
+    span{
+        font-size: 2rem;
+    }
     section{
         width: 50vw;
     }
     input{
-        width: 7vw;
+        width: 10vw;
+        height: 10vw;
+        font-size: 2rem;
     }
     button{
         margin: 20px;
