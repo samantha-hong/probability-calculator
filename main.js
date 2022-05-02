@@ -7,7 +7,7 @@ const userInput = document.querySelector('#fact-num');
 
 function factorial(){
     let num = Number(userInput.value);
-    if(isNaN(num) || num < 0){
+    if(isNaN(num) || num < 0 || num%1 != 1){
         factorialSolution.innerText = 'Error! The input must be a positive integer.'
     } else if(num === 0){
         factorialSolution.innerText = '1'
@@ -30,7 +30,7 @@ const permutationSolution = document.querySelector('#perm-sol');
 function permutation(){
     let n1 = Number(document.querySelector('#n1').value);
     let r1 = Number(document.querySelector('#r1').value);
-    if(n1 < r1){
+    if(n1 < r1 || n1%1 !=0 || r1%1 !=0){
         permutationSolution.innerText = 'Error! n must be and integer larger than r.'
     } else {
         let arr1 = [];
@@ -50,7 +50,7 @@ const combinationSolution = document.querySelector('#comb-sol');
 function combination() {
     let n2 = Number(document.querySelector('#n2').value);
     let r2 = Number(document.querySelector('#r2').value);
-    if(n2 < r2){
+    if(n2 < r2 || n2%1 !=0 || r2%1 !=0){
         combinationSolution.innerText = 'Error! n must be an integer larger than r.'
     } else{
         let arr2 = [];
