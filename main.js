@@ -7,7 +7,7 @@ const userInput = document.querySelector('#fact-num');
 
 function factorial(){
     let num = Number(userInput.value);
-    if(isNaN(num) || num < 0 || num%1 != 1){
+    if(isNaN(num) || num < 0 || num%1 != 0){
         factorialSolution.innerText = 'Error! The input must be a positive integer.'
     } else if(num === 0){
         factorialSolution.innerText = '1'
