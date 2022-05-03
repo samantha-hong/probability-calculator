@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body{
     background-color: black;
     color: white;
@@ -87,6 +93,14 @@ button{
 
 .combination input, .combination button{
     color: #bd99ff
+}
+
+#fact-sol, #perm-sol, #comb-sol{
+    width: 95%;
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 @media screen and (max-width: 800px){
